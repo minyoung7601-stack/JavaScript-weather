@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>날씨</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Chart.js 라이브러리 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h2>날씨예보</h2>
+    <p id="location"></p>
+    <input placeholder="도시이름입력" />
+    <button id="searchBtn">검색</button>
+    <ul>
+      <li>
+        <img />
+        <p></p>
+        <div class="temp"></div>
+      </li>
+      <li>
+        <img />
+        <p></p>
+        <div class="temp"></div>
+      </li>
+      <li>
+        <img />
+        <p></p>
+        <div class="temp"></div>
+      </li>
+      <li>
+        <img />
+        <p></p>
+        <div class="temp"></div>
+      </li>
+      <li>
+        <img />
+        <p></p>
+        <div class="temp"></div>
+      </li>
+      <li>
+        <img />
+        <p></p>
+        <div class="temp"></div>
+      </li>
+      <li>
+        <img />
+        <p></p>
+        <div class="temp"></div>
+      </li>
+    </ul>
+    <canvas id="weatherChart"></canvas>
+    <script src="custom_종합.js"></script>
+  </body>
+</html>
+<!-- 
+종합 응용) 
+날씨와 그래프
+1. html요소 가지고 오기
+2. api키 가지고 오기 :  let APIkey = "7be782d450a3cc1488345fef0cbb797e";
+3. 현재 위치 기반 날씨 가져오기
+4. 도시이름으로 검색
+5. render 함수에서 화면에 나타나게 하기
+6. 3시간 간격으로 날씨를 가지고 옴(주소값 바꾸기)
+7. 차트그리기
+
+
+https://www.chartjs.org/docs/latest/getting-started/ 
+
+https://openweathermap.org/에 회원가입
+
+오픈 웨더 사이트에 회원가입해서 정보 가져와야함.
+
+API란 
+  어플리케이션 프로그래밍 인터페이스의 약자(Application Programming Interface)
+  프로그램과 서버의 데이터베이스와 상호작용을 도와주는 역할
+  (데이터를 주고 받을 수 있도록 하는 서비스)
+
+  동기(Synchronous)와 비동기(Asynchronous)
+  동기(Synchronous)식 : 순차적으로 작업을 수행하는것(순서대로 작업을 수행하는 것)
+  먼저 나온 작업이 끝나야 다음 작업이 실행이 되는것
+
+  비동기(Asynchronous): 앞에서 작업이 끝나지 않았더라도 계속 요청을 받음
+  시간이 걸리지 않는 것을 먼저 처리해줌
+  시간이 걸리는 것은 나중에 처리해줌
+
+    async function weather(){
+    let response = await fetch("서버주소") 해당 서버 주소에 정보를 요청을 함
+    let date = await response.json() response에 담긴 정보는 객체형태로 들어가있음(서버 관련 정보)
+  }
+
+
+-->
